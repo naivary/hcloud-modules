@@ -1,0 +1,8 @@
+cluster:
+  clusterName: ${cluster_name}
+  network:
+    cni: 
+      name: none
+    dnsDomain: ${cluster_dns_domain}
+  proxy:
+    disabled: true

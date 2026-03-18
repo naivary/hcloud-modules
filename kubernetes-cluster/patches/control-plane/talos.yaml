@@ -1,0 +1,16 @@
+cluster:
+  inlineManifests:
+%{ for manifest in inline_manifests ~}
+    - name: ${manifest.name}
+      contents: ${indent(6, yamlencode(manifest.contents))}
+%{ endfor ~}
+machine:
+  features:
+    kubernetesTalosAPIAccess:
+      enabled: true
+      allowedRoles:
+        - "os:reader"
+        - "os:etcd:backup"
+      allowedKubernetesNamespaces:
+        - kube-system
+        - default

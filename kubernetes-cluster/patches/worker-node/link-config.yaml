@@ -1,0 +1,6 @@
+apiVersion: v1alpha1
+kind: LinkConfig
+name: int0
+up: true
+routes:
+  - gateway: "${subnet_gw}"

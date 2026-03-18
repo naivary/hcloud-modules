@@ -1,0 +1,5 @@
+apiVersion: v1alpha1
+kind: LinkAliasConfig
+name: int0
+selector:
+  match: true # get the only physical interface
